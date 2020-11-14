@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.5)
     (trace_clearance 0.2)
@@ -87,9 +87,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "gbr/"))
   )
 
   (net 0 "")
@@ -675,7 +675,7 @@
       (net 13 "Net-(L1-Pad2)"))
     (pad 1 smd rect (at -1.8 0 180) (size 1.5 4.2) (layers B.Cu B.Paste B.Mask)
       (net 3 +V))
-    (model ${KISYS3DMOD}/Inductor_SMD.3dshapes/L_Taiyo-Yuden_NR-50xx.wrl
+    (model ${KISYS3DMOD}/Inductor_SMD.3dshapes/L_Bourns-SRN4018.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
