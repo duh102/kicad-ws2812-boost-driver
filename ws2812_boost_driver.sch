@@ -304,22 +304,22 @@ Text GLabel 5600 2900 0    50   Input ~ 0
 D2
 Text GLabel 5600 3200 0    50   Input ~ 0
 A1
-Text GLabel 2100 4400 0    50   Input ~ 0
+Text GLabel 8200 3650 2    50   Input ~ 0
 DOUT
 Wire Wire Line
-	2100 4400 2200 4400
-Text GLabel 2100 3800 0    50   Input ~ 0
+	8200 3650 8100 3650
+Text GLabel 2100 4400 0    50   Input ~ 0
 D1
-Text GLabel 2100 3700 0    50   Input ~ 0
+Text GLabel 2100 4300 0    50   Input ~ 0
 D2
 Text GLabel 2100 2100 0    50   Input ~ 0
 A1
 Wire Wire Line
 	2200 2100 2100 2100
 Wire Wire Line
-	2200 3700 2100 3700
+	2200 4300 2100 4300
 Wire Wire Line
-	2100 3800 2200 3800
+	2100 4400 2200 4400
 NoConn ~ 3600 2100
 NoConn ~ 3600 2200
 NoConn ~ 3600 2300
@@ -335,11 +335,10 @@ NoConn ~ 2200 2900
 NoConn ~ 2200 3000
 NoConn ~ 2200 3300
 NoConn ~ 2200 3400
-NoConn ~ 2200 3500
-NoConn ~ 2200 3600
+NoConn ~ 2200 3800
+NoConn ~ 2200 3700
 NoConn ~ 2200 4100
 NoConn ~ 2200 4200
-NoConn ~ 2200 4300
 $Comp
 L Regulator_Switching:MCP1640CH U3
 U 1 1 5FAC22FB
@@ -506,4 +505,56 @@ Text GLabel 5600 1400 0    50   Input ~ 0
 +V
 Wire Wire Line
 	5600 1400 5700 1400
+$Comp
+L MCU_Microchip_ATtiny:ATtiny10-TS U4
+U 1 1 5FB0901B
+P 7500 3750
+F 0 "U4" H 6970 3796 50  0000 R CNN
+F 1 "ATtiny10-TS" H 6970 3705 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 7500 3750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8127-AVR-8-bit-Microcontroller-ATtiny4-ATtiny5-ATtiny9-ATtiny10_Datasheet.pdf" H 7500 3750 50  0001 C CNN
+	1    7500 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 7500 3050 1    50   Input ~ 0
++5V
+Wire Wire Line
+	7500 3050 7500 3150
+Text GLabel 7500 4450 3    50   Input ~ 0
+GND
+Wire Wire Line
+	7500 4450 7500 4350
+Wire Wire Line
+	8200 3750 8100 3750
+Wire Wire Line
+	8600 3750 8500 3750
+Text GLabel 8600 3750 2    50   Input ~ 0
++5V
+$Comp
+L Device:R R7
+U 1 1 5FB0D6BE
+P 8350 3750
+F 0 "R7" H 8420 3796 50  0000 L CNN
+F 1 "10kR" H 8420 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8280 3750 50  0001 C CNN
+F 3 "~" H 8350 3750 50  0001 C CNN
+	1    8350 3750
+	0    1    1    0   
+$EndComp
+Text GLabel 2100 3600 0    50   Input ~ 0
+SCK
+Text GLabel 2100 3500 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	2200 3500 2100 3500
+Wire Wire Line
+	2100 3600 2200 3600
+Text GLabel 8200 3450 2    50   Input ~ 0
+SCK
+Text GLabel 8200 3550 2    50   Input ~ 0
+MOSI
+Wire Wire Line
+	8100 3550 8200 3550
+Wire Wire Line
+	8200 3450 8100 3450
 $EndSCHEMATC
